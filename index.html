@@ -13,18 +13,18 @@
     }
     .container {
       background-color: #fff;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      padding: 30px;
+      padding: 40px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
+    h1, h2, h3 {
       color: #222;
     }
     .button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 20px 0;
       padding: 12px 20px;
       font-size: 16px;
       background-color: #007bff;
@@ -35,24 +35,79 @@
     .button:hover {
       background-color: #0056b3;
     }
-    .description {
+    table {
+      width: 100%;
+      border-collapse: collapse;
       margin-top: 20px;
-      font-size: 16px;
-      line-height: 1.6;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      text-align: center;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Amazon Sales Dataset 2022 India</h1>
-    <p class="description">
-      This dataset is a cleaned and enriched collection of Amazon sales data from India, originally from 2022.
-      It includes realistic user behavior, customer demographics, product reviews, basket-level transactions,
-      and pricing insights.
-
-      2023 All rights reserved.
+    <p>
+      The <strong>Amazon Sales Dataset 2022 India</strong> is a richly enriched dataset simulating Indian ecommerce behavior,
+      product reviews, transactions, and customer demographics. Based on authentic Amazon product and review information,
+      this version has been cleaned and extended to support advanced analytics including segmentation, basket analysis, and text mining.
     </p>
+
+    <h2>📌 Key Highlights</h2>
+    <ul>
+      <li>10,000+ rows of simulated transactions featuring real-world patterns</li>
+      <li>Customer-level insights including demographics, user age, and avg order value</li>
+      <li>Transaction-level basket data with product reviews and pricing</li>
+      <li>Diverse review and rating content ideal for NLP and segmentation</li>
+    </ul>
+
     <a class="button" href="Amazon Sales Dataset.csv" download>Download Dataset (Excel)</a>
+
+    <h2>📁 Dataset Structure</h2>
+    <table>
+      <thead>
+        <tr><th>Column</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>user_id</td><td>Synthetic unique identifier per user</td></tr>
+        <tr><td>product_id</td><td>Unique product identifier</td></tr>
+        <tr><td>unique_key</td><td>Composite of user_id + product_id</td></tr>
+        <tr><td>transaction_id</td><td>Cart-level transaction ID</td></tr>
+        <tr><td>product_name</td><td>Cleaned product title</td></tr>
+        <tr><td>category_level_1..7</td><td>Split hierarchy of product category</td></tr>
+        <tr><td>discounted_price, actual_price</td><td>Numeric price values in ₹</td></tr>
+        <tr><td>user_age, user_gender, user_location</td><td>Customer demographics</td></tr>
+        <tr><td>avg_order_value</td><td>Age-weighted average user order value</td></tr>
+        <tr><td>rating, rating_cat</td><td>Numerical & categorical rating (low, med, high)</td></tr>
+        <tr><td>review_title, review_content</td><td>Cleaned review data for NLP</td></tr>
+      </tbody>
+    </table>
+
+    <h2>📊 Comparison to Similar Datasets</h2>
+    <p>
+      Inspired by Kaggle's open Amazon datasets, this version provides:
+      larger scale (~10K rows), synthetic demographics, basket-level modeling,
+      and hierarchical categories for granular insights.
+    </p>
+
+    <h2>🔒 License</h2>
+    <p>
+      &copy; 2025 All rights reserved. This dataset is provided for non-commercial analytical use only.
+      Redistribution without permission is prohibited.
+    </p>
+
+    <div class="footer">Amazon Sales Dataset 2022 India &mdash; All rights reserved.</div>
   </div>
 </body>
 </html>
